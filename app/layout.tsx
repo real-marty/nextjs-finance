@@ -6,13 +6,8 @@ import "./globals.css";
 
 import { cn } from "@/lib/utils";
 
-import {
-  ClerkProvider,
-  SignInButton,
-  SignedIn,
-  SignedOut,
-  UserButton,
-} from "@clerk/nextjs";
+import { ClerkProvider } from "@clerk/nextjs";
+import { QueryProvider } from "@/providers/query-provider";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -38,7 +33,7 @@ export default function RootLayout({
             fontSans.variable,
           )}
         >
-          {children}
+          <QueryProvider>{children}</QueryProvider>
         </body>
       </html>
     </ClerkProvider>
