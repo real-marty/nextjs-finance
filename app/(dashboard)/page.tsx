@@ -1,3 +1,5 @@
+"use client";
+
 export default function Home() {
-  return <>this is an authenticated route</>;
+  return <div>Homo erectus</div>;
 }
