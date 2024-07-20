@@ -1,6 +1,16 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
 ## Getting Started
+
+Setup database for the postgresql:
+
+```bash
+#run
+
+docker-compose up -d
+
+#then the connection string is (if docker variables not set):
+
+postgresql://postgres:changeme@localhost:5432/database
+```
 
 First, run the development server:
 
