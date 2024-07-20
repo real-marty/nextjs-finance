@@ -4,7 +4,13 @@ import { handle } from "hono/vercel";
 import accounts from "./accounts";
 import { HTTPException } from "hono/http-exception";
 
-export const runtime = "edge";
+//! Module build failed: UnhandledSchemeError: Reading from "node:stream" is not handled by plugins (Unhandled scheme).
+//! Webpack supports "data:" and "file:" URIs by default.
+//! You may need an additional plugin to handle "node:" URIs.
+//! Import trace for requested module:
+
+//! CAUSES ERROR WITH CLOUDFLARE WORKERS
+// export const runtime = "edge";
 
 const app = new Hono().basePath("/api");
 
