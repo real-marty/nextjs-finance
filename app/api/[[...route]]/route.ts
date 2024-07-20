@@ -10,7 +10,7 @@ import { HTTPException } from "hono/http-exception";
 //! Import trace for requested module:
 
 //! CAUSES ERROR WITH CLOUDFLARE WORKERS
-// export const runtime = "edge";
+//? export const runtime = "edge";
 
 const app = new Hono().basePath("/api");
 
