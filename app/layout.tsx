@@ -8,6 +8,7 @@ import { cn } from "@/lib/utils";
 
 import { ClerkProvider } from "@clerk/nextjs";
 import { QueryProvider } from "@/providers/query-provider";
+import { SheetProvider } from "@/providers/sheet-provider";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -33,7 +34,10 @@ export default function RootLayout({
             fontSans.variable,
           )}
         >
-          <QueryProvider>{children}</QueryProvider>
+          <QueryProvider>
+            <SheetProvider />
+            {children}
+          </QueryProvider>
         </body>
       </html>
     </ClerkProvider>
