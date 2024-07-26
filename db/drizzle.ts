@@ -1,6 +1,6 @@
 import { drizzle } from "drizzle-orm/postgres-js";
 import postgres from "postgres";
-import * as schema from "@/drizzle/schema/schema";
+import * as schema from "@/db/drizzle/schema/schema";
 
 // for migrations
 export const migrationClient = postgres(process.env.DATABASE_URL as string, {

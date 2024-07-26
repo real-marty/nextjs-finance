@@ -1,5 +1,5 @@
 import { db } from "@/db/drizzle";
-import { accounts, insertAccountSchema } from "@/drizzle/schema/schema";
+import { accounts, insertAccountSchema } from "@/db/drizzle/schema/schema";
 
 import { clerkMiddleware, getAuth } from "@hono/clerk-auth";
 
