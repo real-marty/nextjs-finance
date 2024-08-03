@@ -5,7 +5,14 @@ import { usePathname, useRouter } from "next/navigation";
 import { useMedia } from "react-use";
 
 import { NavButton } from "@/components/nav-button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
 
@@ -50,7 +57,7 @@ export const Navigation = ({}: Props) => {
   if (isMobile) {
     return (
       <Sheet open={isOpen} onOpenChange={setIsOpen}>
-        <SheetTrigger>
+        <SheetTrigger asChild>
           <Button
             variant={"outline"}
             size={"sm"}
@@ -60,6 +67,12 @@ export const Navigation = ({}: Props) => {
           </Button>
         </SheetTrigger>
         <SheetContent side={"left"} className="px-2">
+          <SheetHeader className="sr-only">
+            <SheetTitle>Mobile menu</SheetTitle>
+            <SheetDescription>
+              Navigate to different sections of the app
+            </SheetDescription>
+          </SheetHeader>
           <nav className="flex flex-col gap-y-2 pt-6">
             {routes.map((route) => (
               <Button
